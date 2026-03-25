@@ -1,0 +1,82 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:Arial;
+background:linear-gradient(120deg,#74ebd5,#9face6);
+}
+
+/* HEADER */
+header{
+background:linear-gradient(45deg,#ff512f,#dd2476);
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* BOX */
+.box{
+max-width:400px;
+margin:20px auto;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* INPUT */
+input,select,textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+/* BUTTON */
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:linear-gradient(45deg,#ff512f,#dd2476);
+color:white;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:10px;
+}
+
+.card{
+background:white;
+padding:10px;
+border-radius:10px;
+text-align:center;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+background:#ff512f;
+color:white;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+
+/* HIDE */
+.hide{
+display:none;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AV Information Centre</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h2>AV Information Centre</h2>
+<p>All Online Services Available</p>
+</header>
+
+<!-- REGISTER -->
+<div class="box" id="register">
+<h3>Register</h3>
+<input id="rname" placeholder="Name">
+<input id="rpass" type="password" placeholder="Password">
+<button onclick="register()">Register</button>
+<p onclick="showLogin()">Already account? Login</p>
+</div>
+
+<!-- LOGIN -->
+<div class="box hide" id="login">
+<h3>Login</h3>
+<input id="lname" placeholder="Name">
+<input id="lpass" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<p onclick="showRegister()">New user? Register</p>
+</div>
+
+<!-- MAIN -->
+<div id="main" class="hide">
+
+<div class="box">
+<h3>Services</h3>
+
+<div class="services">
+<div class="card" onclick="selectService('Aadhaar Update',50)">आधार अपडेट ₹50</div>
+<div class="card" onclick="selectService('PAN Card',100)">PAN कार्ड ₹100</div>
+<div class="card" onclick="selectService('Income Certificate',80)">आय प्रमाण पत्र ₹80</div>
+<div class="card" onclick="selectService('Ration Card',100)">राशन कार्ड ₹100</div>
+<div class="card" onclick="selectService('Online Form',100)">Online Form ₹100</div>
+</div>
+</div>
+
+<div class="box">
+<h3>📋 Service Form</h3>
+
+<input id="name" placeholder="आपका नाम">
+<input id="mobile" placeholder="मोबाइल नंबर">
+
+<select id="service">
+<option>Service चुनें</option>
+</select>
+
+<textarea id="msg" placeholder="समस्या लिखें"></textarea>
+
+<button onclick="submitForm()">Submit & Pay</button>
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/919262579654" target="_blank">💬</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
