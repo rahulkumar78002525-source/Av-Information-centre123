@@ -58,9 +58,39 @@ alert("Please fill all details");
 return;
 }
 
-// UPI PAYMENT
-let upi="upi://pay?pa=kushwaha.5@superyespop&pn=AV Information Centre&am="+selectedAmount+"&cu=INR";
-window.location.href=upi;
+// FORM SUBMIT (QR SHOW)
+function submitForm(){
+
+let name=document.getElementById("name").value;
+let mobile=document.getElementById("mobile").value;
+let msg=document.getElementById("msg").value;
+
+if(name==""||mobile==""||selectedService==""){
+alert("Please fill all details");
+return;
+}
+
+// QR दिखाओ
+document.getElementById("paymentBox").classList.remove("hide");
+
+// data save करो
+localStorage.setItem("cname",name);
+localStorage.setItem("cmobile",mobile);
+localStorage.setItem("cmsg",msg);
+}
+
+// PAYMENT CONFIRM → WHATSAPP
+function confirmPayment(){
+
+let name=localStorage.getItem("cname");
+let mobile=localStorage.getItem("cmobile");
+let msg=localStorage.getItem("cmsg");
+
+let text="Name:"+name+" Mobile:"+mobile+" Service:"+selectedService+" Message:"+msg+" Payment Done";
+
+window.open("https://wa.me/919262579654?text="+encodeURIComponent(text));
+
+}
 
 // WHATSAPP
 setTimeout(()=>{
