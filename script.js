@@ -59,7 +59,7 @@ return;
 }
 
 // UPI PAYMENT
-let upi="upi://pay?pa=xyz123@yespop&pn=AV Information Centre&am="+selectedAmount+"&cu=INR";
+let upi="upi://pay?pa=kushwaha.5@superyespop&pn=AV Information Centre&am="+selectedAmount+"&cu=INR";
 window.location.href=upi;
 
 // WHATSAPP
